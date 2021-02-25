@@ -1,0 +1,36 @@
+// c#定义
+// 1.对象内是数组
+//  public class VideoData
+//     {
+//         public List<JsonVideoData> datas;
+//     }
+//     [Serializable]
+//     public class JsonVideoData
+//     {
+//         public int id;
+//         public int type;
+//         public string name;
+//     }
+    ///////
+    // public List<JsonVideoData> jsonVideoDatas = new List<JsonVideoData>();
+    //     void ReadVideoJson()
+    //     {
+    //         string jsonStr = File.ReadAllText(videoPathDir + videoJsonName);
+    //         jsonVideoDatas = JsonUtility.FromJson<VideoData>(jsonStr).datas;
+    //     }
+
+// 下面是对象
+    {
+        "datas": [
+          {
+            "id": 1,
+            "type": 1,
+            "name": "中国功夫.mp4"
+          },
+          {
+            "id": 2,
+            "type": 1,
+            "name": "FuChouZhe.mp4"
+          }
+        ]
+      }
