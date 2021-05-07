@@ -26,6 +26,7 @@ class ChildDemo extends Component {
     constructor(props){
         super(props)
         this.state={}
+        props.deletItem();//方法
     }
     render() { 
         return ( 
@@ -36,7 +37,7 @@ class ChildDemo extends Component {
          );
     }
     deletItem(){
-        this.props.deletItem(this.props.index)
+        this.props.deletItem(this.props.index);//父组件的方法
     }
 }
 

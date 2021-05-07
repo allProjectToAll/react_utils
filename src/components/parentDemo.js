@@ -2,6 +2,8 @@ import '../App.css';
 import React,{Fragment} from 'react';
 // import ReactDOM from 'react-dom';
 import ChildDemo from './childDemo'
+
+import Context from '../common/context/context'
 // import axios from 'axios'
 
 
@@ -68,6 +70,12 @@ class ParentDemo extends React.Component{
         <p>111111</p>
         <p>22222</p>
       </div>
+
+
+      <p className="title">
+        3.组件传值  Context
+      </p>
+      <Context></Context>
     </div>
     </Fragment>
 
@@ -110,6 +118,19 @@ class ParentDemo extends React.Component{
       list:list
     })
   }
+
+
+  // setState 用async和爱await来写
+  // async fun1(){
+  //   await this.setStateAsync({
+  //     count:this.state.count++
+  //   })
+  // }
+  // setStateAsync(state){//封装一个方法，返回的值就是resolve，
+  //   return new Promise((resolve,reject)=>{
+  //     this.setState(state,resolve);
+  //   })
+  // }
 
 
 

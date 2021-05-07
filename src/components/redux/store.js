@@ -2,8 +2,9 @@ import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
+let defaultState = {count:1}
 //第一个reducer
-const FirstReducer = (state={count:1},action)=>{
+const FirstReducer = (state = defaultState,action)=>{
     switch(action.type){
         case 'add':
             return {count:state.count+1};

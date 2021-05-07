@@ -26,6 +26,7 @@ function App(){
                 <Route exact path="/" component={Home} ></Route>
                 <Route path="/classes" component={Classes} ></Route>
                 <RouteGuard path="/mine" component={Mine} ></RouteGuard>{/**这个用了路由守卫，判断有没有登陆 */}
+                {/* <Route path="/mine" component={Mine} ></Route> */}    {/**没有用路由守卫 */}
                 <Route path="/login" component={Login} ></Route>
                 {/* 演示传参取参 */}
                 <Route path="/detail/:course" component={Detail} ></Route>
@@ -114,7 +115,10 @@ class RouteGuard extends Component{
         const {component:Component,...otherProps} = this.props;
         return (
             <Route {...otherProps} render={(props)=>(
-                this.state.isLogin?<Component {...props}></Component>:<Redirect to={ {pathname:'/login',state:{from:props.location.pathname}} }></Redirect>
+                this.state.isLogin ?
+                <Component {...props}></Component>
+                :
+                <Redirect to={ {pathname:'/login',state:{from:props.location.pathname}} }></Redirect>
             )}></Route>
 
         )
