@@ -7,6 +7,7 @@ import HOC from './components/HOC/HOC'
 import Hook from './components/hooks/index'
 import Redux from './components/redux/index'
 import Router from './components/routerComponent/index'
+import Context from './components/context/parent'
 // import Card from './components/card'
 
 
@@ -40,6 +41,10 @@ class App extends React.Component{
       <br/><br/>
       <h2>7.路由展示</h2>
       <Router></Router>
+
+      <br/><br/>
+      <h2>8.context展示</h2>
+      <Context></Context>
 
 
 

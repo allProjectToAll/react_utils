@@ -4,7 +4,7 @@ import thunk from 'redux-thunk'
 
 let defaultState = {count:1}
 //第一个reducer
-const FirstReducer = (state = defaultState,action)=>{
+const FirstReducer = (state=defaultState,action)=>{
     switch(action.type){
         case 'add':
             return {count:state.count+1};

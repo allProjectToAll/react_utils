@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 class demo extends Component {
     // 1.dom挂载的时候执行函数
-    //1).componentWillMount  //组建将要挂载  可以调用api，但是不能dom操作  XXXXXXXXXX
+    //1).componentWillMount  //组建将要挂载  可以调用api，但是不能dom操作
     //2).componentDidMount   //组建已经挂载   可以进行dom操作，对状态操作
 
     // 2.下面是state/props发生变化的时候执行的生命周期函数
     //1).shouldComponentUpdate   //组建是否需要更新，返回布尔值
-    //2).componentWillUpdate     //组建将要更新  XXXXXXXXXX
+    //2).componentWillUpdate     //组建将要更新
     //3).render
     //4).componentDidUpdate      //组建已经更新
 
@@ -16,12 +16,6 @@ class demo extends Component {
 
     //4.组建将要被删除之前执行
     //1).componentWillUnmount   //组建将要销毁
-
-
-
-
-
-    // getDerivedStateFromProps(props,state)  // props 表示父组件传过来的值， state 表示当前子组件的state。
 
 
 
@@ -38,7 +32,7 @@ class demo extends Component {
     
 
 
-    shouldComponentUpdate(nextProps,nextStates){//这个生命周期需要返回一个布尔值，true：更新当前子组件，false：不更新当前子组件
+    shouldComponentUpdate(nextProps,nextStates){//这个生命周期需要返回一个布尔值，true：继续往下执行，false：不往下执行
         console.log('1-shouldComponentUpdate');
         // if(nextProps.content !== nextState.content){//要用双等于号
         //     return true;
