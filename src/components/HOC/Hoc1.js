@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 // 高阶组件第一种：传入一个组件，返回一个新的组件
-// 解释：传入一个组件，返回一个新的组件(就是重新写一个函数组建，把原有的class组件当作参数传进去当作一个dom，然后再在该dom中传入新的属性)
+// 解释：传入一个组件，返回一个新的组件,原本调用的属性可以获取到，高阶组件内部独有的属性也可以获取到
 
 //高阶组件：
 const withLearnReact = (Comp) => {//Comp是传入的组建
@@ -18,10 +19,10 @@ class Hoc1 extends Component {
         return (
             <div>
                 <p>{this.props.title}</p>
-                <p>{this.props.name}</p>
+                <p>{this.props.name}</p>{/***这个name是高阶组件独有的属性 */}
             </div>
         );
     }
 }
-//在这导出，用高阶组件套入原有的组件，这样就能获取到高阶组件内部新的属性 
+//
 export default withLearnReact(Hoc1);

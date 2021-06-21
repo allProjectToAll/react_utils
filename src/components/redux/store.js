@@ -21,7 +21,15 @@ const FirstReducer = (state=defaultState,action)=>{
 //创建数据仓库，把编写好的reducer传给createStore
 const store = createStore(FirstReducer,applyMiddleware(thunk,logger));//用applyMiddleware中间键会异步加载，传入logger参数时组件操作会自动打印日志,参数thunk表示异步加载
 
-
-
-
 export default store;
+
+
+// 如果是多个函数，就用高阶函数拼接
+// import { combineReducers } from 'redux'
+// import todos from './todos'  //函数1
+// import counter from './counter'  //函数2
+
+// export default combineReducers({
+//   todos,
+//   counter
+// })

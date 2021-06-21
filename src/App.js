@@ -10,6 +10,8 @@ import Router from './components/routerComponent/index'
 import Context from './components/context/parent'
 // import Card from './components/card'
 
+import Test from './test'
+
 
 class App extends React.Component{
 
@@ -45,6 +47,9 @@ class App extends React.Component{
       <br/><br/>
       <h2>8.context展示</h2>
       <Context></Context>
+
+      <br/>
+      <Test></Test>
 
 
 

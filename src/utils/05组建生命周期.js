@@ -6,7 +6,11 @@ class demo extends Component {
     //2).componentDidMount   //组建已经挂载   可以进行dom操作，对状态操作
 
     // 2.下面是state/props发生变化的时候执行的生命周期函数
-    //1).shouldComponentUpdate   //组建是否需要更新，返回布尔值
+    //1).shouldComponentUpdate   //组建是否需要更新，返回布尔值，
+                                //这个组建被代替：
+                                //在class组建中用：PureComponent（只有当state里面的值变化了才会执行render函数），
+                                //在函数组件中用：useMemo:  第一个参数是函数，第二个参数是监听的值是否变化，如果变化才会执行useMemo里面的函数，//类似于计算属性computed
+                                                //mome:  和PureComponent一样的功能，只是mome用在函数组件中（只有当state里面的值变化了才会执行render函数）(高阶函数的写法)
     //2).componentWillUpdate     //组建将要更新
     //3).render
     //4).componentDidUpdate      //组建已经更新
@@ -19,7 +23,7 @@ class demo extends Component {
 
 
 
-
+    // 使用：
     componentWillMount(){
         console.log('componentWillMount----组建将要挂载在页面的时刻')
     }
@@ -27,10 +31,6 @@ class demo extends Component {
     componentDidMount(){
         console.log('componentDidMount----组建挂载完成的时刻')
     }
-
-
-    
-
 
     shouldComponentUpdate(nextProps,nextStates){//这个生命周期需要返回一个布尔值，true：继续往下执行，false：不往下执行
         console.log('1-shouldComponentUpdate');

@@ -18,14 +18,34 @@ import { connect } from 'react-redux'
             //     document.getElementById('root')
             //   );
 
+//非装饰器写法
+const mapStateToProps = (state,ownProps)=>{//第一个参数就是 Redux的store,第二个参数 ownProps，是组件自己的 props
+    console.log(state,ownProps,'state,ownProps')
+    return {
+        count:state.count
+    }
+}
 
-@connect(
-    state=>({count:state.count}),
-    dispatch=>({
+const mapDispatchToProps = (dispatch)=>{
+    return {
         add:()=>dispatch({type:"add"}),
         reduce:()=>dispatch({type:"reduce"})
-    }),
-)
+    }
+}
+
+// 装饰器写法
+// @connect(
+//     state=>({count:state.count}),//这里的state是参数，store里面的形参
+//     dispatch=>({
+//         add:()=>dispatch({type:"add"}),//这里的dispatch是参数，store里面的形参
+//         reduce:()=>dispatch({type:"reduce"}),//这里的dispatch是参数，store里面的形参
+//         asyncAdd:()=>dispatch=>{
+//             setTimeout(()=>{
+//                 dispatch({type:"add"});//异步调用，直接写的话就会报错，需要借助thunk
+//             },2000)
+//         }
+//     }),
+// )
 
 
 class FirstRedux extends Component {
@@ -44,5 +64,7 @@ class FirstRedux extends Component {
     }
 }
 
+export default connect(mapStateToProps,mapDispatchToProps)(FirstRedux);
  
-export default FirstRedux;
+// 装饰器写法
+// export default FirstRedux;

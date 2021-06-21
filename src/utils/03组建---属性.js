@@ -43,6 +43,7 @@ class Movie extends React.components{
                 {/* 获取state值 */}
                 {this.state.msg}
 
+                {/* setState方法调用 */}
                 <button onClick={this.clickFn}></button>
                 {/* 传递参数用剪头函数 */}
                 <button onClick={(item)=>this.clickFn(item)}></button>
@@ -66,7 +67,7 @@ class Movie extends React.components{
         </Fragment>
     }
 
-    textChange(){
+    textChange(e){
         //获取文本框内容的方法有两种
         // 1.
         let val = e.target.value;

@@ -18,7 +18,7 @@ function App() {
       return name + '改变name的方法'
     }
   
-  const otherName =  useMemo(()=>changeName(name),[name]);//useMemo,第一个参数是函数，第二个参数是监听的值是否变化，如果变化才会执行useMemo里面的函数
+    const otherName =  useMemo(()=>changeName(name),[name]);//useMemo,第一个参数是函数，第二个参数是监听的值是否变化，如果变化才会执行useMemo里面的函数
     return (
         <>
           <div>{otherName}</div>

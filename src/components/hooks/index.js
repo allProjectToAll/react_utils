@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import UseState from './useState'
 import UseEffect from './useEffect'
-import UseContextParent from'./useContextParent'
+// import UseContextParent from'./useContextParent'
 import UseReducer from './useReducer'
 // import OtherHooks from './otherHooks'
+
+import UseReduxUseContext from './useReducer和useContext共同案例/index'
 
 class Hook extends Component {
     // state = {  }
@@ -22,13 +24,17 @@ class Hook extends Component {
                 2.UseEffect
                 <UseEffect></UseEffect>
                 3.useContext
-                <UseContextParent></UseContextParent>
+                {/* <UseContextParent></UseContextParent> */}
+                <br/>
                 4.UseReducer
                 <UseReducer></UseReducer>
                 5.其他的Hooks（目前代码有报错，没找到原因，所以注视掉了）
                 {/* <OtherHooks></OtherHooks> */}
+                <br/>
+                6.UseRedux和UseContext共同使用的demo
+                <UseReduxUseContext></UseReduxUseContext>
 
-                6.自己封装的hooks，需要用use开头
+                7.自己封装的hooks，需要用use开头
 
 
 

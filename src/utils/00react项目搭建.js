@@ -7,7 +7,7 @@
 // cd      进入项目
 // npm init                              初始化(不需要了)
 // npm install --save react react-dom       导入react和react-dom（不需要了）
-// npm install --save  react-router-dom     react路由
+// npm install --save  react-router-dom     react路由(不需要)
 // npm start
 
 

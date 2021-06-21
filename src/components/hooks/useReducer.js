@@ -14,8 +14,6 @@ const reducer = (state,action)=>{
             return state;
     }
 }
-
-
 export default function UseReducer(){
     //useReducer:等号前面是形参，后面是实参。
                 //1.state是状态值，这里是初始化定义的变量

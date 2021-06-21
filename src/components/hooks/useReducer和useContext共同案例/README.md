@@ -1,0 +1,12 @@
+
+实现两个按钮点击控制文字颜色变化：
+
+按钮点击调用dispatch方法，也就是父组件index文件内父级Color的属性，Color又是被封装起来的，也就是公共组件colorContext文件里面的useReducer内的reducer方法，把参数传给组件Color的子组件。
+
+组件Color被用到的地方，所有的子组件都能获取到传过来的值
+
+然后子组件ShowArea就会获取父组件传过来的值
+
+
+注释：
+    一个A组件想控制或者传值给另一个B组件，就是找到这两个组件外面的公共父组件C，A用useContext调用父组件方法把参数传给父组件C（传递的时候父组件用useReducer接收），然后父组件C用useContex传给子组件

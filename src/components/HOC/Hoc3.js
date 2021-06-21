@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// 装饰器语法
+// 高阶组件 - 链式调用-装饰器写法
 
 const withLearnReact = (Comp) => {
     const newComponent = (props) => {
